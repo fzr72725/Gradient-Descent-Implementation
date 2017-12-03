@@ -86,9 +86,7 @@ Implemented `GradientDescent` class and `__init__`, `fit`, `fit_SGD`, `predict`,
 
 `__init__`: Initialize the class instance with a number of options, most importance ones being: cost function choice and gradient function choice
 
-`fit`: Follows the pseudocode from above, using the selected cost and gradient function passed from.
-
-`logistic_regression_functions.py` to iterate gradient steps. The function uses the whole data set.
+`fit`: Follows the pseudocode from above, using the selected cost and gradient function passed from `logistic_regression_functions.py` to iterate gradient steps. The function uses the whole data set.
 
 `fit_SGD`: The individual data point version of fit.
 
