@@ -49,13 +49,20 @@ Each partial derivative will be computed as follows:
 
 ## Code
 `logistic_regression_functions.py`
+
 Implemented  `predict_proba` , `predict`, `cost` and `gradient` functions.
+
 `predict_proba`: calculates the result of `h(x)` for the given coefficients.
+
 `predict`: Rounds the proba values so that we get a prediction of either 0 or 1. An optional argument is provided for the threshold, which is defaulted to `0.5`.  **Note:** The names of these functions were chosen to align with `sklearn`'s conventions.
+
 `cost_batch`: Uses `predict_proba` function to calculate cost using the current parameters and the whole
 data set. The function also included a regularization term for Ridge if necessary.
+
 `gradient_batch` : Uses `predict_proba` function to calculate gradient of the cost function using the current parameters and the whole data set.
+
 `cost_SGD`: Calculates cost using an random individual data point.
+
 `gradient_SGD`: Calculates gradient of the cost function using an random individual data point.
 
 ## 2: Gradient Descent
@@ -76,8 +83,15 @@ In this pseudocode, and in the implementation default setting, gradient descent 
 `GradientDescent.py`.
 
 Implemented `GradientDescent` class and `__init__`, `fit`, `fit_SGD`, `predict`, `add_intercept` method.
+
 `__init__`: Initialize the class instance with a number of options, most importance ones being: cost function choice and gradient function choice
-`fit`: Follows the pseudocode from above, using the selected cost and gradient function passed from `logistic_regression_functions.py` to iterate gradient steps. The function uses the whole data set.
+
+`fit`: Follows the pseudocode from above, using the selected cost and gradient function passed from.
+
+`logistic_regression_functions.py` to iterate gradient steps. The function uses the whole data set.
+
 `fit_SGD`: The individual data point version of fit.
+
 `predict`: Calling the predict function from `logistic_regression_functions.py` to make final prediction.
+
 `add_intercept`: If selected True when initializing the `GradientDescent` instance, a ones columns will be added to the training data and testing data
