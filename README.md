@@ -1,25 +1,25 @@
 # Gradient-Descent-Implementation
 
-## 1: Cost function and Gradient
+## 1. Cost function and Gradient
 
 In order to be able to evaluate if our gradient descent algorithm is working
 correctly, we will need to be able to calculate the cost.
 
-Recall the log likelihood function for logistic regression. Our goal is to *maximize* this value.
+The log likelihood function for logistic regression. The goal is to *maximize* this value.
 
 ![Cost Function](images/likelihood.png)
 <!--
 \ell(\boldsymbol\beta) = \sum_{i=1}^{n} y_i \log ( h(\mathbf{x_i}) ) + (1-y_i) \log (1 - h(\mathbf{x_i}))
 -->
 
-Recall that the hypothesis function *h* is defined as follows:
+The hypothesis function *h* is defined as follows:
 
 ![hypothesis](images/hypothesis.png)
 <!--
 h(\mathbf{x_i}) = \frac{1}{1+e^{-\boldsymbol\beta\mathbf{x_i}}}
 -->
 
-Since we will be implemented Gradient *Descent*, which *minimizes* a function, we'll look at the cost function below, which is just the negation of the log likelihood function above.
+Since Gradient *Descent* (*minimizes* a function) will be implemented, we'll look at the cost function below, which is just the negation of the log likelihood function above.
 
 ![cost function](images/cost.png)
 <!--
